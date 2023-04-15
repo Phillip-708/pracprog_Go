@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link rel=“stylesheet” type="text/css" href=“list.css”>
+</head>
+<body>
+    <h1>ゴミの掃き溜め</h1>
+
+    <form method="post" action="/save">
+        <label for=>愚痴をどうぞ→</label>
+        <input name="comment" type="text">
+        <input type="submit" value="トラッシュ">
+    </form>
+
+    <h2>愚痴集</h2>
+    <ul>
+        {{range $element := .}}
+        <li>{{$element.Comment}}</li>
+        {{end}}
+    </ul>
+
+</body>
+</html>
